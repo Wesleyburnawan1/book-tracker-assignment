@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const BookSchema = mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
@@ -21,4 +22,5 @@ const BookSchema = mongoose.Schema({
   dateFinished: { type: Date },
   date: { type: Date, default: Date.now },
 });
+
 module.exports = mongoose.model("book", BookSchema);
